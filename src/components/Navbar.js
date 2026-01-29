@@ -32,7 +32,7 @@ function Navbar() {
             <Link to="/home" onClick={closeMenu}>Home</Link>
           </li>
           <li>
-            <Link to="/" onClick={closeMenu}>Services</Link>
+            <Link to="/Services" onClick={closeMenu}>Services</Link>
           </li>
           <li>
             <Link to="/about" onClick={closeMenu}>About Us</Link>
