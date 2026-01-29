@@ -1,0 +1,204 @@
+/* BASE*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(16px, 5vw, 60px);
+  background: white;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2933;
+}
+
+.nav-center {
+  display: flex;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+/* Button */
+.nav-btn {
+  background: #2bb0a6;
+  border: none;
+  padding: 10px 22px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Button inside menu */
+.nav-cta {
+  list-style: none;
+  padding: 12px 18px;
+}
+
+/*HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/*TABLET (HAMBURGER + DROPDOWN BELOW ICON) */
+@media (max-width: 1023px) and (min-width: 769px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    flex: none;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    min-width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 8px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/*MOBILE*/
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+    order: 0;
+    margin-right: 8px;
+  }
+
+  .nav-left {
+    order: 1;
+    flex: 1;
+  }
+
+  .nav-btn {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav-center {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+    background: white;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+  }
+}
+
+/*SMALL PHONES*/
+@media (max-width: 480px) {
+
+  .nav-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+}
+/*DESKTOP & LAPTOP */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none !important;
+  }
+
+  .nav-center {
+    position: static;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  /* Show button inside list */
+  .nav-cta {
+    display: block;
+    padding: 0;
+  }
+
+  .nav-cta .nav-btn {
+    margin-left: 10px;
+  }
+}

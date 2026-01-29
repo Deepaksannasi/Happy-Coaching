@@ -1,0 +1,167 @@
+
+
+.features {
+  background: #fff;
+  padding: 80px 10%; /* desktop exact */
+  padding-top: 50px;
+
+}
+
+   /*LAYOUT */
+
+.features-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+
+.features-left {
+  max-width: 720px;
+}
+
+.small-title {
+  color: #9a9ab0;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.features-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2b2b5f;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: #7a7a95;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  width: 100%;
+
+}
+
+/* FEATURES LIST */
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #2b2b5f;
+}
+
+.feature-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #7a7a95;
+}
+
+/*ICONS */
+
+.icon {
+  width: 45px;
+  height: 45px;
+  background: #f3f3ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  flex-shrink: 0;
+}
+
+.icon1 { background-image: url("../assets/Featured1.svg"); }
+.icon2 { background-image: url("../assets/Featured2.svg"); }
+.icon3 { background-image: url("../assets/Featured3.svg"); }
+.icon4 { background-image: url("../assets/Featured4.svg"); }
+
+/*RIGHT IMAGE */
+
+.features-right img {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/*TABLET (≤ 1024px) */
+
+@media (max-width: 1024px) {
+  .features {
+    padding: 80px 6%;
+  }
+
+  .features-wrapper {
+    gap: 50px;
+  }
+
+  .features-left {
+    max-width: 100%;
+  }
+
+  .desc {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/*MOBILE (≤ 900px) */
+
+@media (max-width: 900px) {
+  .features-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .features-right img {
+    max-width: 380px;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px)*/
+
+@media (max-width: 480px) {
+  .features {
+    padding: 60px 16px;
+  }
+
+  .features-left h2 {
+    font-size: 26px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .features-right img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .features-right img {
+    margin-top: 350px; 
+    height:450px;
+    width:450px;
+  }
+}
